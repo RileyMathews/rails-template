@@ -9,7 +9,7 @@ end
 
 after_bundle do
   generate :controller, "Home", "index", "--skip-assets"
-  genereate 'rspec:install'
+  generate 'rspec:install'
 
   route "root to: 'home#index'"
 end
