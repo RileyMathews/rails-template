@@ -7,7 +7,9 @@ gem_group :development, :test do
   gem "rspec-rails"
 end
 
-generate :controller, "Home", "index", "--skip-assets"
-genereate 'rspec:install'
+after_bundle do
+  generate :controller, "Home", "index", "--skip-assets"
+  genereate 'rspec:install'
 
-route "root to: 'home#index'"
+  route "root to: 'home#index'"
+end
